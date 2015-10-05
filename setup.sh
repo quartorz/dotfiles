@@ -13,9 +13,12 @@ if exists "curl" || exists "wget"; then
 	fi
 fi
 
-ln -sv vimrc .vimrc
-mv .vimrc ../
-ln -sv zshrc .zshrc
-mv .zshrc ../
-ln -sdv vim .vim
-mv .vim ../
+if (uname | grep -e 'MINGW' >/dev/null 2>&1) || (uname | grep -e 'CYGWIN' >/dev/null 2>&1); then
+	cp vimrc $HOME/.vimrc
+	cp zshrc $HOME/.zshrc
+	cp -r vim $HOME/.vim
+else
+	ln -sv vimrc $HOME/.vimrc
+	ln -sv zshrc $HOME/.zshrc
+	ln -sdv vim $HOME/.vim
+fi
