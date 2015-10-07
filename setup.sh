@@ -6,10 +6,10 @@ exists(){
 if exists "curl" || exists "wget"; then
 	if exists "curl"; then
 		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-		curl -k "https://github.com/quartorz/oh-my-zsh-solarized-powerline-theme/blob/master/solarized-powerline.zsh-theme" > ~/.oh-my-zsh/custom/solarized-powerline.zsh-theme
+		curl -k "https://raw.githubusercontent.com/quartorz/oh-my-zsh-solarized-powerline-theme/master/solarized-powerline.zsh-theme" > ~/.oh-my-zsh/custom/solarized-powerline.zsh-theme
 	else
 		sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-		wget --no-check-certificate "https://github.com/quartorz/oh-my-zsh-solarized-powerline-theme/blob/master/solarized-powerline.zsh-theme" -P ~/.oh-my-zsh/custom
+		wget --no-check-certificate "https://raw.githubusercontent.com/quartorz/oh-my-zsh-solarized-powerline-theme/master/solarized-powerline.zsh-theme" -P ~/.oh-my-zsh/custom
 	fi
 fi
 

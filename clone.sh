@@ -15,7 +15,7 @@ download(){
 	fi
 
 	if exists "git"; then
-		git clone --recursive "git@github.com:quartorz/dotfiles.git" "$DOTPATH"
+		git clone --recursive "https://github.com/quartorz/dotfiles" "$DOTPATH"
 	fi
 }
 
